@@ -1,11 +1,11 @@
 {
   "name": "frontend",
-  "version": "0.1.0",
-  "systemVersion": "1.0",
+  "version": "2.1.1",
+  "systemVersion": "2.1",
   "system": {
-    "version": "1.0.0",
-    "name": "FireZAP",
-    "url": "https://firezap.pro"
+    "version": "2.1.1",
+    "name": "Whatende-CRM de Atendimentos",
+    "url": "https://crm.whatende.link"
   },
   "private": true,
   "dependencies": {
