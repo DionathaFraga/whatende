@@ -602,7 +602,7 @@ export const sayChatbot = async (
   const filaescolhida = choosenQueueName.name
 
   let numberCPFCNPJ = cpfcnpj;
-  if (filaescolhida === "2ª Via de Boleto" || filaescolhida === "2 Via de Boleto") {
+ if (selectedOption === "2via") {
     if (asaastoken.value !== "") {
       if (isNumeric(numberCPFCNPJ) === true) {
         if (cpfcnpj.length > 2) {
@@ -1949,9 +1949,40 @@ export const sayChatbot = async (
     }    
   }
 
+    if (filaescolhida === "Encerrar atendimento" || filaescolhida === "Sair do atendimento") {
+	
+                              const bodyfinaliza = `Estamos finalizando esta conversa! Caso precise entre em contato conosco!`
+                              //await sleep(2000)
+                              sendMessage(wbot, contact, ticket, bodyfinaliza);
+                                const ticketUpdateAgent = {
+                                  ticketData: {
+                                    status: "closed"
+                                  },
+                                  ticketId: ticket.id
+                                };
+                                //await sleep(2000) 
+                                UpdateTicketService(ticketUpdateAgent);
+  }
+  
   if (selectedOption === "#") {
     const backTo = await backToMainMenu(wbot, contact, ticket);
     return backTo;
+  }
+  
+  
+ if (selectedOption === "#sair") {
+console.log("735")
+                              const bodyfinaliza = `Estamos finalizando esta conversa! Caso precise entre em contato conosco!`
+                              await sleep(2000)
+                              await sendMessage(wbot, contact, ticket, bodyfinaliza);
+                                const ticketUpdateAgent = {
+                                  ticketData: {
+                                    status: "closed"
+                                  },
+                                  ticketId: ticket.id
+                                };
+                                await sleep(2000) 
+                                await UpdateTicketService(ticketUpdateAgent);
   }
 
   if (!getStageBot) {
