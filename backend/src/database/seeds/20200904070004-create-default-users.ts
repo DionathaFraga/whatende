@@ -7,7 +7,7 @@ module.exports = {
       [
         {
           name: "Administrador",
-          email: "admin@firezap.pro",
+          email: "admin@whatende.link",
           passwordHash: "$2a$08$WaEmpmFDD/XkDqorkpQ42eUZozOqRCPkPcTkmHHMyuTGUOkI8dHsq",
           profile: "admin",
           tokenVersion: 0,
