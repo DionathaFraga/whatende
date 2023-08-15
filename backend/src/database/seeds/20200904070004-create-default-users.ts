@@ -7,8 +7,8 @@ module.exports = {
       [
         {
           name: "Administrador",
-          email: "admin@whatende.link",
-          passwordHash: "$2a$08$WaEmpmFDD/XkDqorkpQ42eUZozOqRCPkPcTkmHHMyuTGUOkI8dHsq",
+          email: "admin@admin.com",
+          passwordHash: "admin",
           profile: "admin",
           tokenVersion: 0,
           createdAt: new Date(),
